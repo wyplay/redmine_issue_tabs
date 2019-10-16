@@ -4,7 +4,7 @@ module RedmineIssueTabs
       base.send(:include, InstanceMethods)
 
       base.class_eval do
-        before_filter :get_time_entries, only: [:show]
+        before_action :get_time_entries, only: [:show]
       end
     end
 
